@@ -77,6 +77,16 @@ metalsmith.use(publish({
 }));
 ```
 
+Specify field to use for date when `publish` unspecified (default: 'date'):
+
+```js
+var publish = require('metalsmith-publish');
+
+metalsmith.use(publish({
+  futureMeta: 'date'
+}));
+```
+
 Or pass callback to automate rebuild:
 
 ```js

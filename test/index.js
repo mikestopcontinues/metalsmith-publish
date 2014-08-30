@@ -73,6 +73,20 @@ describe('metalsmith-publish', function () {
 			});
 	});
 
+	it('should use file[opts.futureMeta] when file.publish unspecified', function (done) {
+		var metalsmith = Metalsmith('test/fixtures/future-meta');
+		metalsmith
+			.use(publish({}))
+			.build(function (err, files) {
+				if (err) {
+					return done(err);
+				}
+
+				assert.equal(Object.keys(files).length, 0);
+				done();
+			});
+	});
+
 	it('should publish future-dated files when opts.future == true', function (done) {
 		var metalsmith = Metalsmith('test/fixtures/future-publish');
 		metalsmith
