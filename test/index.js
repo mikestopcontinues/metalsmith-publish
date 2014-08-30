@@ -87,10 +87,10 @@ describe('metalsmith-publish', function () {
 			});
 	});
 
-	it('should call opts.alert callback if available', function (done) {
+	it('should call opts.futureFn callback if available', function (done) {
 		var metalsmith = Metalsmith('test/fixtures/future-alert');
 		metalsmith
-			.use(publish({ alert: cb }))
+			.use(publish({ futureFn: cb }))
 			.build(function (err, files) {
 				if (err) {
 					return done(err);

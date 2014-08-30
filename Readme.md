@@ -81,7 +81,7 @@ Or pass callback to automate rebuild:
 
 ```js
 metalsmith.use(publish({
-  alert: function (futureFiles, metalsmith, done) {
+  futureFn: function (futureFiles, metalsmith, done) {
     Object.keys(futureFiles).forEach(function (file) {
       console.log('rebuild ' + file + ' @ ' new Date(futureFiles[file].publish).toTime());
     });
@@ -102,7 +102,7 @@ All of the same options apply, just add them to the `"plugins"` key in your `met
         "draft": false,
         "private": false,
         "future": false,
-        "alert": "console.log('Callback script passed (futureFiles, metalsmith, done). E.g. futureFiles = ' + Object.keys(futureFiles).join(', ')); done();"
+        "futureFn": "console.log('Callback script passed (futureFiles, metalsmith, done). E.g. futureFiles = ' + Object.keys(futureFiles).join(', ')); done();"
       }
     }
   }
