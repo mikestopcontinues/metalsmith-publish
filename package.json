@@ -1,0 +1,15 @@
+{
+  "name": "metalsmith-publish",
+  "description": "A Metalsmith plugin that adds support for draft, private, and future-dated posts.",
+  "repository": "git://github.com/mikestopcontinues/metalsmith-publish.git",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "debug": "~0.7.4"
+  },
+  "devDependencies": {
+    "metalsmith": "0.x",
+    "mocha": "1.x"
+  }
+}
