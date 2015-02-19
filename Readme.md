@@ -56,6 +56,28 @@ metalsmith.use(publish({
 }));
 ```
 
+### Unlisted
+
+Removes the `collection` metadata, useful for publishing internally wihtout adding it to your posts lists or RSS feeds.
+
+```markdown
+---
+title: My Article
+publish: unlisted
+collection: blog
+---
+```
+
+Include in build via config:
+
+```js
+var publish = require('metalsmith-publish');
+
+metalsmith.use(publish({
+  unlisted: true
+}));
+```
+
 ### Future-dated
 
 Set post publish state via metadata:

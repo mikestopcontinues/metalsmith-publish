@@ -59,6 +59,34 @@ describe('metalsmith-publish', function () {
 			});
 	});
 
+	it('should remove collection from files with metadata publish: unlisted', function (done) {
+		var metalsmith = Metalsmith('test/fixtures/unlisted');
+		metalsmith
+			.use(publish({}))
+			.build(function (err, files) {
+				if (err) {
+					return done(err);
+				}
+
+				assert.equal(files['one.md'].collection, undefined);
+				done();
+			});
+	});
+
+	it('should not remove collection from files with metadata publish: unlisted', function (done) {
+		var metalsmith = Metalsmith('test/fixtures/unlisted-listed');
+		metalsmith
+			.use(publish({ unlisted: true }))
+			.build(function (err, files) {
+				if (err) {
+					return done(err);
+				}
+
+				assert.notEqual(files['one.md'].collection, undefined);
+				done();
+			});
+	});
+
 	it('should not publish files with future-dated metadata publish value', function (done) {
 		var metalsmith = Metalsmith('test/fixtures/future');
 		metalsmith
