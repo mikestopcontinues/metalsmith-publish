@@ -14,6 +14,6 @@
   },
   "devDependencies": {
     "metalsmith": "0.x",
-    "mocha": "^2.1.0"
+    "mocha": "~2.1.0"
   }
 }
