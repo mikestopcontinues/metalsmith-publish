@@ -6,11 +6,14 @@
   "author": "Mike Stop Continues <mikestopcontinues@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --reporter spec test/index.js"
+  },
   "dependencies": {
     "debug": "~0.7.4"
   },
   "devDependencies": {
     "metalsmith": "0.x",
-    "mocha": "1.x"
+    "mocha": "~2.1.0"
   }
 }
