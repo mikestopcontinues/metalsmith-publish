@@ -58,7 +58,7 @@ metalsmith.use(publish({
 
 ### Unlisted
 
-Removes the `collection` metadata, useful for publishing internally wihtout adding it to your posts lists or RSS feeds.
+Removes the `collection` metadata, useful for publishing internally wihtout adding it to your posts lists or RSS feeds. Use it after `collection` plugin.
 
 ```markdown
 ---
