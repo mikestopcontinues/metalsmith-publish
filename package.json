@@ -10,10 +10,10 @@
     "test": "mocha --reporter spec test/index.js"
   },
   "dependencies": {
-    "debug": "~0.7.4"
+    "debug": "~4.1.1"
   },
   "devDependencies": {
-    "metalsmith": "0.x",
-    "mocha": "~2.1.0"
+    "metalsmith": "2.x",
+    "mocha": "~7.1.1"
   }
 }
